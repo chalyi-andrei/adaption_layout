@@ -1,0 +1,131 @@
+.red{
+	border: 1px solid red;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: gray;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.child {
+  display: flex;
+  width: 100%;
+}
+@media screen and (min-width: 700px) {
+    .child {
+      width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+    .child {
+      width: 70%;
+  }
+}
+@media screen and (min-width: 1400px) {
+    .child {
+      width: 100%;
+  }
+}
+.column{
+	display: flex;
+	flex-flow: column wrap;
+}
+.center{
+	justify-content: center ; 
+	align-items: center;
+}
+
+
+
+
+
+
+.head{
+	height:800px;
+	background: #222 url('../img/homebg.jpg') no-repeat center 10%;
+	background-size: cover;
+}
+.logo{
+	position: absolute;
+	top: 31px;
+	left: 35px;
+}
+.contentHead{
+	height:800px;
+}
+.head .title{
+	font: 60px Myriad Pro, Arial, sans-serif;
+	color: white;
+	text-align:center;
+	padding: 0px;
+	margin: 0px;
+}
+.head .text{
+	text-align:center;
+	font: 20px Myriad Pro, Arial, sans-serif;
+	text-shadow: 0px 0px 20px black;
+	color: white;
+	padding: 0px;
+	margin: 0px;
+    margin-top: 30px;
+}
+.sub{
+	justify-content: center;
+	margin-top: 60px;
+}
+.sub  input{
+	height:	50px;
+	width: 312px;
+	padding-left: 20px;
+	font-size: 18px;
+	border-radius: 25px 0px 0px  25px;
+	border: none;
+}
+.sub  input:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.sub  button{
+	margin-top: 1px;
+	margin-left: -4px;
+	height:	52px;
+	width: 168px;
+	background-color: #20ab50;
+	color: white;
+	padding-left: 18px;
+	font-size: 20px;
+	border-radius: 0px 25px 25px  0px;
+	border: none;
+}
+
+.nav {
+	position: absolute;
+	top: 65%; /*335px 5.3%*/
+	right: 2%;
+}
+.nav div {
+	background:  url('../img/smallElips.png') no-repeat;
+	width: 8px;
+	height:	9px;
+	margin-bottom: 15px;
+	
+}
+.nav div:hover {
+	background:  url('../img/bigElips.png') no-repeat;
+	width: 12px;
+	height:	12px;
+	margin-bottom: 20px;
+}
+.nav a{
+	display: block; 
+    height: 100%;
+}
+li {
+    list-style-type: none;
+}
