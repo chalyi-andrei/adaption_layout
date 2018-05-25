@@ -1,115 +1,85 @@
-.red{
-	border: 1px solid red;
-}
+@import 'global.css';
 
-body{
-	margin: 0px;
-	padding: 0px;
-	background-color: gray;
-}
-
-.container {
+/* HEADER */
+.header {
   display: flex;
   flex-wrap: wrap;
-}
-
-.child {
-  display: flex;
-  width: 100%;
-}
-@media screen and (min-width: 700px) {
-    .child {
-      width: 50%;
-  }
-}
-@media screen and (min-width: 1024px) {
-    .child {
-      width: 70%;
-  }
-}
-@media screen and (min-width: 1400px) {
-    .child {
-      width: 100%;
-  }
-}
-.column{
-	display: flex;
-	flex-flow: column wrap;
-}
-.center{
-	justify-content: center ; 
-	align-items: center;
-}
-
-
-
-
-
-
-.head{
-	height:800px;
+  justify-content: center;
+	height: 800px;
 	background: #222 url('../img/homebg.jpg') no-repeat center 10%;
 	background-size: cover;
 }
-.logo{
-	position: absolute;
-	top: 31px;
-	left: 35px;
+.logoWrapp {
+  width: 100%;
+  padding-top: 20px;
 }
-.contentHead{
-	height:800px;
+.logo {
+  display: block;
+  background-image: url('../img/logo.png');
+  background-size: cover;
+  height: 57px;
+  width: 142px;
 }
-.head .title{
-	font: 60px Myriad Pro, Arial, sans-serif;
+.captionBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: -90px;
+}
+.header .title {
+	font: 3.75rem Myriad Pro, Arial, sans-serif;
 	color: white;
 	text-align:center;
 	padding: 0px;
 	margin: 0px;
 }
-.head .text{
+.header .subtitle {
 	text-align:center;
-	font: 20px Myriad Pro, Arial, sans-serif;
+	font: 1.25rem Myriad Pro, Arial, sans-serif;
 	text-shadow: 0px 0px 20px black;
 	color: white;
 	padding: 0px;
 	margin: 0px;
-    margin-top: 30px;
+  margin-top: 30px;
+  max-width: 52%;
 }
-.sub{
+.form {
+  display: flex;
 	justify-content: center;
 	margin-top: 60px;
 }
-.sub  input{
+.form .input {
 	height:	50px;
 	width: 312px;
 	padding-left: 20px;
-	font-size: 18px;
+	font-size: 1.3rem;
 	border-radius: 25px 0px 0px  25px;
 	border: none;
 }
-.sub  input:active, :hover, :focus {
+.form .input:active, :hover, :focus {
     outline: 0;
     outline-offset: 0;
 }
-.sub  button{
-	margin-top: 1px;
+.form .btn {
 	margin-left: -4px;
 	height:	52px;
 	width: 168px;
 	background-color: #20ab50;
 	color: white;
 	padding-left: 18px;
-	font-size: 20px;
+	font-size: 1.3rem;
 	border-radius: 0px 25px 25px  0px;
 	border: none;
 }
-
 .nav {
 	position: absolute;
-	top: 65%; /*335px 5.3%*/
+	top: 65%;
 	right: 2%;
 }
-.nav div {
+.nav .list-item {
 	background:  url('../img/smallElips.png') no-repeat;
 	width: 8px;
 	height:	9px;
@@ -128,4 +98,61 @@ body{
 }
 li {
     list-style-type: none;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+  .header {
+    height: 100vh;
+  }
+  .logoWrapp {
+    padding-top: 10px;
+  }
+  .logo {
+    width: 120px;
+    height: 50px;
+  }
+  .captionBlock {
+    top: -60px;
+  }
+  .header .subtitle {
+    margin-top: 20px;
+    max-width: 60%;
+  }
+  .form {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 75%;
+  }
+  .header .title {
+    font-size: 3rem;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px;
+    padding-left: 0;
+  }
+  .captionBlock {
+    top: 0;
+  }
+  .nav .list-item {
+    margin: 10px 5px;
+  }
+  .form .input {
+    width: 65%;
+  }
+  .form .btn {
+    width: 35%;
+  }
+  .header .subtitle {
+    max-width: 100%;
+  }
 }
